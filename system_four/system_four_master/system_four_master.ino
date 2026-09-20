@@ -8,7 +8,7 @@
   //might be too low
   uint8_t wait_time = 50;
 
-  uint8_t data = 159
+  uint8_t data = 159;
 
   void setup() {
     Serial.begin(115200);
