@@ -2,8 +2,8 @@
   #define SDA_PIN 14
 
   //connect a wire between these two points and the program should send the byte
-  #define test_pin_output = -1;
-  #define test_pin_input = -1;
+  #define test_pin_output = -1
+  #define test_pin_input = -1
 
   //might be too low
   uint8_t wait_time = 50;
