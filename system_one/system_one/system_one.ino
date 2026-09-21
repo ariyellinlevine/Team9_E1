@@ -49,7 +49,7 @@ void loop() {
     Serial.println(green);
     Serial.println(blue);
 
-    if(red > green & red > blue){
+    if(red > green &* red > blue){
       digitalWrite(RED_PIN, HIGH);
     }
     else if(green > red && green > blue){
