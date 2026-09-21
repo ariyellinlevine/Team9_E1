@@ -8,7 +8,17 @@ void setup() {
 
   pinMode(PIEZO_PIN, OUTPUT);
   pinMode(ANALOG_PIN, INPUT);
-…    // Map the read voltage (1360 - 4095) back to duration (100ms - 300ms)
+
+  tone(PIEZO_PIN, 440, 500);
+
+  Serial.println("Receiver startup complete.");
+}
+
+void loop() {
+  int adc = analogRead(ANALOG_PIN);
+
+  if (adc > 500) {
+    // Map the read voltage (1360 - 4095) back to duration (100ms - 300ms)
     int toneDuration = map(adc, 1360, 4095, 100, 300);
 
     Serial.print("Read ADC: ");
@@ -24,4 +34,3 @@ void setup() {
     delay(10);
   }
 }
-
