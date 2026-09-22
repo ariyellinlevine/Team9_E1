@@ -1,8 +1,6 @@
 #include <DacESP32.h>
 
-#define PIEZO_PIN 32
-
-DacESP32 dac(PIEZO_PIN);
+DacESP32 dac(DAC_CHAN_0);
 
 char inputBuffer[32];
 bool cmd_ready = false; 
